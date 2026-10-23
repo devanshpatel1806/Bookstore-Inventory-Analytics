@@ -300,7 +300,7 @@ The project includes four visualizations to present important sales insights.
 
 The bar chart compares sales quantities across book categories. It helps identify categories with higher or lower sales volume.
 
-![Bar Chart - Total Sales by Category](bar_chart.png)
+![Bar Chart - Total Sales by Category](bar_chart .png)
 
 ### 14.2 Line Chart — Monthly Sales Trends
 
