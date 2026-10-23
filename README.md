@@ -247,7 +247,7 @@ Records a book sale and calculates the transaction amount based on the applicabl
 
 Analyzes sales information to understand revenue, quantity sold, transaction activity, and best-selling books.
 
-![Sales Analysis](screenshots/sales_analysis.png)
+![Sales Analysis](sales_analysis.png)
 
 Sales analysis can help identify popular books, evaluate category performance, and support inventory planning.
 
