@@ -221,19 +221,19 @@ Using a class helps organize the code, reuse methods, and maintain related funct
 
 Displays book details such as title, author, category, price, and stock quantity.
 
-![View Inventory](screenshots/view_inventory.png)
+![View Inventory](view_inventory.png)
 
 ### 10.2 Add a New Book
 
 Allows new book information to be entered and added to the inventory.
 
-![Add Book](screenshots/add_book.png)
+![Add Book](add_book.png)
 
 ### 10.3 Update Inventory
 
 Updates the available stock quantity of an existing book.
 
-![Update Inventory](screenshots/update_inventory.png)
+![Update Inventory](update_inventory.png)
 
 ## 11. Sales Management
 
@@ -241,7 +241,7 @@ Updates the available stock quantity of an existing book.
 
 Records a book sale and calculates the transaction amount based on the applicable book price, quantity, and discount.
 
-![Record Sale](screenshots/record_sale.png)
+![Record Sale](record_sale.png)
 
 ### 11.2 Sales Analysis
 
@@ -290,7 +290,7 @@ The report includes:
 - Best-selling book.
 - Number of low-stock books.
 
-![Generate Report](screenshots/generate_report.png)
+![Generate Report](generate_report.png)
 
 ## 14. Data Visualization
 
@@ -300,19 +300,19 @@ The project includes four visualizations to present important sales insights.
 
 The bar chart compares sales quantities across book categories. It helps identify categories with higher or lower sales volume.
 
-![Bar Chart - Total Sales by Category](screenshots/bar_chart.png)
+![Bar Chart - Total Sales by Category](bar_chart.png)
 
 ### 14.2 Line Chart — Monthly Sales Trends
 
 The line chart presents monthly sales trends and helps observe changes in sales activity over time.
 
-![Line Chart - Monthly Sales Trends](screenshots/line_chart.png)
+![Line Chart - Monthly Sales Trends](line_chart.png)
 
 ### 14.3 Pie Chart — Revenue Share by Category
 
 The pie chart shows the contribution of different book categories to total revenue.
 
-![Pie Chart - Revenue Share by Category](screenshots/pie_chart.png)
+![Pie Chart - Revenue Share by Category](pie_chart.png)
 
 ### 14.4 Heatmap — Correlation Between Numerical Variables
 
@@ -320,7 +320,7 @@ The heatmap visualizes correlations between numerical variables, such as book pr
 
 Correlation can help reveal linear relationships between variables, but it does not prove causation.
 
-![Heatmap - Correlation Between Price and Sales Volume](screenshots/heatmap.png)
+![Heatmap - Correlation Between Price and Sales Volume](heatmap.png)
 
 ## 15. Testing and Verification
 
