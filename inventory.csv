@@ -1,0 +1,101 @@
+Book_ID,Title,Author,Category,Publisher,Price,Stock_Quantity,Reorder_Level,Publication_Year
+B001,Non-Fiction Book 1,S. Mehta,Non-Fiction,HarperCollins,201,35,10,2008
+B002,Non-Fiction Book 2,A. Sharma,Non-Fiction,Penguin,1014,4,10,2012
+B003,Fiction Book 3,N. Joshi,Fiction,HarperCollins,557,69,20,2023
+B004,Business Book 4,N. Joshi,Business,Oxford Press,163,20,15,2009
+B005,Technology Book 5,R. Patel,Technology,Pearson,839,13,5,2016
+B006,History Book 6,D. Singh,History,McGraw Hill,691,5,5,2017
+B007,Non-Fiction Book 7,K. Verma,Non-Fiction,McGraw Hill,750,80,10,2007
+B008,Fiction Book 8,R. Patel,Fiction,HarperCollins,616,37,5,2017
+B009,Business Book 9,M. Shah,Business,Oxford Press,1078,46,15,2011
+B010,Business Book 10,M. Shah,Business,McGraw Hill,296,77,10,2010
+B011,Education Book 11,S. Mehta,Education,Rupa Publications,927,34,15,2006
+B012,Technology Book 12,N. Joshi,Technology,Oxford Press,215,40,5,2011
+B013,History Book 13,N. Joshi,History,Rupa Publications,585,63,20,2009
+B014,Business Book 14,P. Desai,Business,Rupa Publications,435,31,20,2023
+B015,Self-Help Book 15,M. Shah,Self-Help,McGraw Hill,891,28,20,2007
+B016,Fiction Book 16,M. Shah,Fiction,Rupa Publications,374,19,20,2024
+B017,Non-Fiction Book 17,D. Singh,Non-Fiction,McGraw Hill,938,48,15,2022
+B018,Fiction Book 18,P. Desai,Fiction,Rupa Publications,384,68,15,2008
+B019,Business Book 19,D. Singh,Business,Penguin,1040,20,15,2021
+B020,Science Book 20,P. Desai,Science,Rupa Publications,1189,13,10,2009
+B021,History Book 21,A. Sharma,History,McGraw Hill,480,69,15,2020
+B022,Fiction Book 22,P. Desai,Fiction,HarperCollins,379,46,5,2012
+B023,Non-Fiction Book 23,R. Patel,Non-Fiction,McGraw Hill,325,62,10,2009
+B024,Education Book 24,N. Joshi,Education,HarperCollins,488,33,10,2014
+B025,Self-Help Book 25,D. Singh,Self-Help,Penguin,914,56,10,2012
+B026,Non-Fiction Book 26,S. Mehta,Non-Fiction,McGraw Hill,842,2,10,2005
+B027,Non-Fiction Book 27,R. Patel,Non-Fiction,Penguin,270,29,15,2007
+B028,Technology Book 28,S. Mehta,Technology,McGraw Hill,720,62,10,2023
+B029,Education Book 29,N. Joshi,Education,HarperCollins,647,60,5,2008
+B030,Self-Help Book 30,N. Joshi,Self-Help,Pearson,875,54,5,2026
+B031,Non-Fiction Book 31,K. Verma,Non-Fiction,Penguin,274,51,10,2011
+B032,Technology Book 32,N. Joshi,Technology,HarperCollins,1068,17,15,2019
+B033,Technology Book 33,R. Patel,Technology,Penguin,304,56,5,2007
+B034,Technology Book 34,D. Singh,Technology,Pearson,490,52,10,2017
+B035,Fiction Book 35,A. Sharma,Fiction,Pearson,487,48,15,2019
+B036,Business Book 36,D. Singh,Business,HarperCollins,1016,71,10,2014
+B037,Technology Book 37,A. Sharma,Technology,Rupa Publications,269,74,15,2006
+B038,Fiction Book 38,M. Shah,Fiction,Penguin,1126,64,5,2010
+B039,Non-Fiction Book 39,N. Joshi,Non-Fiction,Penguin,289,30,10,2023
+B040,Fiction Book 40,K. Verma,Fiction,Oxford Press,317,53,10,2026
+B041,History Book 41,N. Joshi,History,HarperCollins,638,33,15,2019
+B042,History Book 42,D. Singh,History,McGraw Hill,298,1,5,2007
+B043,Technology Book 43,M. Shah,Technology,Oxford Press,1186,33,5,2012
+B044,History Book 44,D. Singh,History,McGraw Hill,733,20,15,2024
+B045,Fiction Book 45,M. Shah,Fiction,Oxford Press,763,13,5,2008
+B046,Science Book 46,S. Mehta,Science,Rupa Publications,707,36,15,2011
+B047,Business Book 47,P. Desai,Business,Penguin,1185,62,5,2025
+B048,Self-Help Book 48,A. Sharma,Self-Help,Oxford Press,716,5,10,2025
+B049,Business Book 49,N. Joshi,Business,McGraw Hill,480,56,5,2008
+B050,Non-Fiction Book 50,A. Sharma,Non-Fiction,Oxford Press,455,69,10,2018
+B051,Science Book 51,K. Verma,Science,Penguin,235,39,15,2011
+B052,Technology Book 52,N. Joshi,Technology,McGraw Hill,360,45,10,2012
+B053,Science Book 53,A. Sharma,Science,HarperCollins,512,52,15,2018
+B054,Technology Book 54,R. Patel,Technology,Pearson,696,20,5,2020
+B055,Technology Book 55,K. Verma,Technology,Oxford Press,558,58,10,2012
+B056,Fiction Book 56,K. Verma,Fiction,Oxford Press,545,51,5,2013
+B057,History Book 57,K. Verma,History,Penguin,1193,51,5,2013
+B058,Science Book 58,R. Patel,Science,McGraw Hill,693,4,20,2016
+B059,History Book 59,R. Patel,History,Pearson,1043,77,10,2013
+B060,Fiction Book 60,S. Mehta,Fiction,Oxford Press,1043,0,20,2007
+B061,History Book 61,P. Desai,History,McGraw Hill,792,15,15,2026
+B062,Self-Help Book 62,P. Desai,Self-Help,McGraw Hill,818,51,10,2011
+B063,Self-Help Book 63,P. Desai,Self-Help,Pearson,926,22,5,2014
+B064,Business Book 64,K. Verma,Business,Pearson,580,55,20,2019
+B065,Technology Book 65,M. Shah,Technology,Rupa Publications,1196,60,5,2014
+B066,History Book 66,P. Desai,History,HarperCollins,341,30,10,2009
+B067,Fiction Book 67,D. Singh,Fiction,McGraw Hill,244,31,5,2019
+B068,Self-Help Book 68,D. Singh,Self-Help,Pearson,548,49,10,2009
+B069,Fiction Book 69,S. Mehta,Fiction,HarperCollins,368,54,20,2006
+B070,Technology Book 70,M. Shah,Technology,Pearson,398,58,15,2019
+B071,Self-Help Book 71,D. Singh,Self-Help,Pearson,1063,20,15,2012
+B072,Business Book 72,S. Mehta,Business,Oxford Press,1142,80,20,2007
+B073,Business Book 73,K. Verma,Business,Oxford Press,630,34,5,2009
+B074,Science Book 74,M. Shah,Science,Rupa Publications,623,49,10,2007
+B075,Self-Help Book 75,D. Singh,Self-Help,Pearson,984,42,5,2011
+B076,Self-Help Book 76,A. Sharma,Self-Help,McGraw Hill,947,74,20,2020
+B077,Fiction Book 77,N. Joshi,Fiction,Pearson,870,38,10,2020
+B078,Technology Book 78,D. Singh,Technology,Penguin,708,55,20,2015
+B079,Self-Help Book 79,M. Shah,Self-Help,McGraw Hill,488,59,5,2017
+B080,Fiction Book 80,M. Shah,Fiction,Pearson,321,54,10,2006
+B081,Business Book 81,S. Mehta,Business,Pearson,926,41,15,2015
+B082,Self-Help Book 82,P. Desai,Self-Help,Penguin,719,53,20,2005
+B083,Fiction Book 83,R. Patel,Fiction,Rupa Publications,866,28,5,2005
+B084,Technology Book 84,M. Shah,Technology,HarperCollins,558,2,10,2020
+B085,Non-Fiction Book 85,P. Desai,Non-Fiction,Oxford Press,596,59,10,2024
+B086,Non-Fiction Book 86,R. Patel,Non-Fiction,McGraw Hill,485,39,5,2014
+B087,Self-Help Book 87,R. Patel,Self-Help,McGraw Hill,962,25,10,2008
+B088,Business Book 88,A. Sharma,Business,Oxford Press,397,72,20,2026
+B089,History Book 89,K. Verma,History,Penguin,291,64,20,2020
+B090,Non-Fiction Book 90,D. Singh,Non-Fiction,Rupa Publications,1037,46,10,2018
+B091,Science Book 91,D. Singh,Science,Pearson,703,78,20,2023
+B092,Business Book 92,R. Patel,Business,Oxford Press,810,31,20,2012
+B093,Education Book 93,A. Sharma,Education,Pearson,926,43,15,2010
+B094,Education Book 94,P. Desai,Education,Oxford Press,584,45,15,2024
+B095,Business Book 95,S. Mehta,Business,Penguin,170,66,10,2018
+B096,Education Book 96,D. Singh,Education,Pearson,642,60,5,2007
+B097,Business Book 97,S. Mehta,Business,Oxford Press,603,51,15,2020
+B098,History Book 98,K. Verma,History,Oxford Press,1021,70,20,2013
+B099,Business Book 99,R. Patel,Business,Rupa Publications,664,29,10,2015
+B100,Non-Fiction Book 100,S. Mehta,Non-Fiction,Rupa Publications,529,24,20,2013
