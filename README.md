@@ -16,7 +16,6 @@ The project demonstrates a complete data analysis workflow, including dataset lo
 - Perform data cleaning and preprocessing where required.
 - Implement inventory management using OOP.
 - Add books and update stock quantities.
-- Identify low-stock books.
 - Record sales and calculate transaction amounts.
 - Analyze revenue, quantity sold, and best-selling books.
 - Perform numerical calculations using NumPy.
@@ -208,7 +207,6 @@ The project implements a `Bookstore` class that groups related inventory, sales,
 - `view_inventory()` — Displays inventory information.
 - `add_book()` — Adds a book to the inventory.
 - `update_inventory()` — Updates the stock quantity.
-- `check_low_stock()` — Identifies books at or below their reorder levels.
 - `record_sale()` — Records sales and calculates transaction details.
 - `generate_report()` — Generates a summary report.
 - `sales_analysis()` — Performs sales-related analysis.
@@ -331,7 +329,6 @@ The project can be tested by checking that:
 - Missing values and duplicate records can be inspected.
 - Inventory information displays correctly.
 - Book addition and stock updates work as expected.
-- Low-stock books are identified correctly.
 - Sales calculations and reports execute successfully.
 - All four visualizations are generated without errors.
 - The Python program runs from the project folder.
@@ -414,7 +411,6 @@ Bookstore_Inventory_Analytics/
 This project demonstrates how Python-based data analysis can support:
 
 - Book inventory management.
-- Low-stock identification.
 - Sales transaction tracking.
 - Category-wise sales and revenue analysis.
 - Monthly sales monitoring.
