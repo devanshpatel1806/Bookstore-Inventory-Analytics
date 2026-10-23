@@ -2,173 +2,390 @@
 
 ## 1. Project Overview
 
-The **Bookstore Inventory & Analytics System** is a Python-based project developed to manage bookstore inventory, record book sales, monitor stock levels, and analyze sales performance.
+The **Bookstore Inventory & Analytics System** is a Python-based project designed to manage bookstore inventory, record sales, analyze sales performance, and generate useful business insights.
 
-The project uses **Object-Oriented Programming (OOP)** to organize inventory operations and uses **Pandas and NumPy** for data handling and numerical analysis. Matplotlib and Seaborn are used to create visualizations that help understand sales trends, category-wise performance, revenue distribution, and relationships between book prices and sales volume.
+The project uses Object-Oriented Programming (OOP) to organize bookstore operations and Pandas and NumPy for data processing and numerical analysis. Matplotlib and Seaborn are used to create visualizations that help understand sales trends, category-wise performance, revenue distribution, and correlations between numerical variables.
 
-The system demonstrates how Python can be used to solve real-world bookstore management problems and support data-driven decisions.
+The project demonstrates a complete data analysis workflow, including dataset loading, data exploration, data-quality checks, inventory management, sales analysis, report generation, and data visualization.
 
 ## 2. Project Objectives
 
-- Manage book inventory efficiently.
-- Display available books and their stock quantities.
-- Add new books to the inventory.
-- Update the stock quantity of existing books.
-- Identify books that have reached their reorder levels.
-- Record book sales and calculate sale amounts.
-- Analyze total revenue and quantity sold.
-- Generate a summary report of bookstore performance.
-- Create charts to understand sales and revenue patterns.
-- Apply OOP, Pandas, NumPy, and data visualization concepts in a practical project.
+- Load and explore inventory and sales datasets.
+- Understand dataset structure, dimensions, column names, and data types.
+- Check for missing values and duplicate records.
+- Perform data cleaning and preprocessing where required.
+- Implement inventory management using OOP.
+- Add books and update stock quantities.
+- Identify low-stock books.
+- Record sales and calculate transaction amounts.
+- Analyze revenue, quantity sold, and best-selling books.
+- Perform numerical calculations using NumPy.
+- Generate a bookstore performance report.
+- Create four visualizations to present sales insights.
 
 ## 3. Technologies Used
 
 | Technology | Purpose |
 |---|---|
 | Python | Core programming language |
-| Object-Oriented Programming (OOP) | Organizing bookstore operations using a class and methods |
-| Pandas | Reading, managing, and analyzing CSV datasets |
-| NumPy | Numerical calculations and statistical operations |
-| Matplotlib | Creating bar, line, and pie charts |
-| Seaborn | Creating the correlation heatmap |
-| Jupyter Notebook | Development, analysis, and visualization |
-| Visual Studio Code | Writing and running the Python program |
-| CSV | Storing inventory and sales data |
-| GitHub | Project hosting and version control |
+| Object-Oriented Programming | Organizing bookstore operations |
+| Pandas | Data loading, manipulation, and analysis |
+| NumPy | Numerical calculations and statistics |
+| Matplotlib | Data visualization |
+| Seaborn | Correlation heatmap |
+| Jupyter Notebook | Data analysis and visualization |
+| Visual Studio Code | Writing and running Python code |
+| CSV | Dataset storage |
+| GitHub | Project hosting and documentation |
 
-## 4. Main Features
+## 4. Project Workflow
 
-### 4.1 View Inventory
+The project follows these steps:
 
-Displays the available bookstore inventory, including book ID, title, author, category, publisher, price, stock quantity, reorder level, and publication year.
+1. Load inventory and sales datasets.
+2. Explore the datasets and inspect their structure.
+3. Check missing values and duplicate records.
+4. Clean and prepare data where necessary.
+5. Implement inventory management functionality.
+6. Record sales and analyze transactions.
+7. Perform numerical and statistical calculations.
+8. Generate a bookstore summary report.
+9. Create four data visualizations.
+10. Test the Python program and document the project.
 
-**Screenshot:**
+## 5. Dataset Loading and Exploration
 
-![View Inventory Output](screenshots/view_inventory.png)
+The project uses two CSV files: `inventory.csv` and `sales.csv`.
 
-### 4.2 Add a New Book
+### 5.1 Loading the Datasets
 
-Allows the user to enter the details of a new book, such as its ID, title, author, category, publisher, price, stock quantity, and reorder level.
+Pandas is used to read the CSV files into DataFrames for analysis.
 
-**Screenshot:**
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-![Add Book Output](screenshots/add_book.png)
+inventory_df = pd.read_csv("inventory.csv")
+sales_df = pd.read_csv("sales.csv")
+```
 
-### 4.3 Update Inventory
+### 5.2 Viewing Dataset Records
 
-Allows the user to update the stock quantity of an existing book. This helps maintain accurate inventory records.
+The `head()` and `tail()` methods display the first and last records of a dataset.
 
-**Screenshot:**
+```python
+inventory_df.head()
+inventory_df.tail()
 
-![Update Inventory Output](screenshots/update_inventory.png)
+sales_df.head()
+sales_df.tail()
+```
 
-### 4.4 Check Low-Stock Books
+### 5.3 Checking Dataset Dimensions
 
-Identifies books whose stock has reached or fallen below the defined reorder level. This helps the bookstore identify items that may need replenishment.
+The `shape` attribute identifies the number of rows and columns.
 
-**Screenshot:**
+```python
+print("Inventory Shape:", inventory_df.shape)
+print("Sales Shape:", sales_df.shape)
+```
 
-![Low Stock Output](screenshots/low_stock.png)
+### 5.4 Inspecting Column Names and Data Types
 
-### 4.5 Record a Sale
+The `columns` attribute lists column names, while `info()` displays data types and non-null counts.
 
-Records a book sale by taking the required book and quantity details. The system calculates the sale amount and displays the sale information.
+```python
+print(inventory_df.columns)
+inventory_df.info()
 
-**Screenshot:**
+print(sales_df.columns)
+sales_df.info()
+```
 
-![Record Sale Output](screenshots/record_sale.png)
+### 5.5 Generating Descriptive Statistics
 
-### 4.6 Sales Analysis
+The `describe()` method provides statistical summaries of numerical columns, including the mean, minimum, maximum, and standard deviation.
 
-Analyzes sales information to understand revenue, total quantity sold, sales transactions, best-selling books, and other useful sales performance details.
+```python
+inventory_df.describe()
+sales_df.describe()
+```
 
-**Screenshot:**
+These operations help understand the structure and characteristics of the datasets before performing analysis.
 
-![Sales Analysis Output](screenshots/sales_analysis.png)
+## 6. Data Cleaning and Preprocessing
 
-### 4.7 Generate Bookstore Report
+Data cleaning helps improve data quality and makes analysis more reliable.
 
-Generates a summary of bookstore performance, including total books, total stock, sales transactions, quantity sold, total revenue, average book price, best-selling book, and low-stock book count.
+### 6.1 Checking Missing Values
 
-**Screenshot:**
+The `isnull().sum()` method counts missing values in each column.
 
-![Generate Report Output](screenshots/generate_report.png)
+```python
+print("Missing Values in Inventory:")
+print(inventory_df.isnull().sum())
 
-## 5. Data Visualization and Analysis
+print("Missing Values in Sales:")
+print(sales_df.isnull().sum())
+```
 
-The project includes four visualizations to present important bookstore sales insights.
+This step helps identify incomplete records that may require attention.
 
-### 5.1 Bar Chart — Total Sales by Category
+### 6.2 Handling Missing Values
 
-The bar chart compares the total sales quantity across book categories. It helps identify which categories contribute the most to sales volume.
+Missing values should be handled according to the dataset and the purpose of the analysis. Depending on the situation, rows may be removed or missing values may be filled using suitable values.
 
-**Screenshot:**
+Example of removing rows containing missing values:
 
-![Bar Chart - Total Sales by Category](screenshots/bar_chart.png)
+```python
+inventory_df = inventory_df.dropna()
+sales_df = sales_df.dropna()
+```
 
-### 5.2 Line Chart — Monthly Sales Trends
+*This example should only be considered part of the completed project if these operations were actually performed. If no missing values were found, report that result instead.*
 
-The line chart presents monthly sales trends. It helps observe changes in sales over time and identify periods with higher or lower sales activity.
+### 6.3 Checking Duplicate Records
 
-**Screenshot:**
+The `duplicated().sum()` method counts fully duplicated rows.
 
-![Line Chart - Monthly Sales Trends](screenshots/line_chart.png)
+```python
+print("Inventory Duplicates:", inventory_df.duplicated().sum())
+print("Sales Duplicates:", sales_df.duplicated().sum())
+```
 
-### 5.3 Pie Chart — Revenue Share by Category
+### 6.4 Removing Duplicate Records
 
-The pie chart displays the share of revenue contributed by different book categories. It helps compare the relative contribution of each category to total revenue.
+If duplicate rows are identified and confirmed to be unnecessary, they can be removed using `drop_duplicates()`.
 
-**Screenshot:**
+```python
+inventory_df = inventory_df.drop_duplicates()
+sales_df = sales_df.drop_duplicates()
+```
 
-![Pie Chart - Revenue Share by Category](screenshots/pie_chart.png)
+*Use this operation in your project description only if you actually removed duplicate records. Distinct sales transactions should not be deleted merely because some values match.*
 
-### 5.4 Heatmap — Correlation Between Book Price and Sales Volume
+## 7. Inventory Dataset Description
 
-The heatmap displays correlations between numerical variables such as book price, stock quantity, quantity sold, and total sale amount. It helps identify relationships between these variables.
-
-**Screenshot:**
-
-![Heatmap - Correlation Between Price and Sales Volume](screenshots/heatmap.png)
-
-## 6. Dataset Description
-
-The project uses two CSV datasets: `inventory.csv` and `sales.csv`.
-
-### 6.1 Inventory Dataset
-
-The inventory dataset contains information about books available in the bookstore.
+The `inventory.csv` dataset stores book information.
 
 | Column | Description |
 |---|---|
-| `Book_ID` | Unique identifier for each book |
-| `Title` | Name of the book |
+| `Book_ID` | Unique identifier for a book |
+| `Title` | Title of the book |
 | `Author` | Name of the author |
-| `Category` | Book category |
+| `Category` | Category of the book |
 | `Publisher` | Name of the publisher |
 | `Price` | Price of the book |
 | `Stock_Quantity` | Number of copies available |
-| `Reorder_Level` | Stock level used to identify books requiring replenishment |
-| `Publication_Year` | Year the book was published |
+| `Reorder_Level` | Stock threshold for identifying low inventory |
+| `Publication_Year` | Year of publication |
 
-### 6.2 Sales Dataset
+## 8. Sales Dataset Description
 
-The sales dataset contains information about bookstore transactions.
+The `sales.csv` dataset stores transaction information.
 
 | Column | Description |
 |---|---|
-| `Sale_ID` | Unique identifier for each sale |
-| `Date` | Date of the sale |
+| `Sale_ID` | Unique identifier for a sale |
+| `Date` | Date of the transaction |
 | `Book_ID` | Identifier of the book sold |
 | `Quantity_Sold` | Number of copies sold |
-| `Unit_Price` | Price per copy at the time of sale |
-| `Discount_Percent` | Discount applied to the sale |
-| `Total_Amount` | Total amount for the transaction |
-| `Payment_Method` | Method used to make the payment |
+| `Unit_Price` | Price per copy |
+| `Discount_Percent` | Discount percentage |
+| `Total_Amount` | Total transaction amount |
+| `Payment_Method` | Method of payment |
 | `Customer_Type` | Type of customer |
 
-## 7. Project Structure
+## 9. Object-Oriented Programming
 
-The project files are organized as follows:
+The project implements a `Bookstore` class that groups related inventory, sales, and reporting operations.
+
+### Main Methods
+
+- `__init__()` — Initializes the bookstore data.
+- `view_inventory()` — Displays inventory information.
+- `add_book()` — Adds a book to the inventory.
+- `update_inventory()` — Updates the stock quantity.
+- `check_low_stock()` — Identifies books at or below their reorder levels.
+- `record_sale()` — Records sales and calculates transaction details.
+- `generate_report()` — Generates a summary report.
+- `sales_analysis()` — Performs sales-related analysis.
+
+Using a class helps organize the code, reuse methods, and maintain related functionality in one place.
+
+## 10. Inventory Management Features
+
+### 10.1 View Inventory
+
+Displays book details such as title, author, category, price, and stock quantity.
+
+![View Inventory](screenshots/view_inventory.png)
+
+### 10.2 Add a New Book
+
+Allows new book information to be entered and added to the inventory.
+
+![Add Book](screenshots/add_book.png)
+
+### 10.3 Update Inventory
+
+Updates the available stock quantity of an existing book.
+
+![Update Inventory](screenshots/update_inventory.png)
+
+## 11. Sales Management
+
+### 11.1 Record a Sale
+
+Records a book sale and calculates the transaction amount based on the applicable book price, quantity, and discount.
+
+![Record Sale](screenshots/record_sale.png)
+
+### 11.2 Sales Analysis
+
+Analyzes sales information to understand revenue, quantity sold, transaction activity, and best-selling books.
+
+![Sales Analysis](screenshots/sales_analysis.png)
+
+Sales analysis can help identify popular books, evaluate category performance, and support inventory planning.
+
+## 12. Numerical Analysis Using NumPy
+
+NumPy supports numerical calculations and statistical analysis.
+
+Depending on the operations performed in the notebook, numerical analysis may include:
+
+- Average and mean calculations.
+- Minimum and maximum values.
+- Standard deviation.
+- Numerical comparisons and array operations.
+
+Example:
+
+```python
+prices = inventory_df["Price"].to_numpy()
+
+print("Average Price:", np.mean(prices))
+print("Minimum Price:", np.min(prices))
+print("Maximum Price:", np.max(prices))
+print("Standard Deviation:", np.std(prices))
+```
+
+This example demonstrates how NumPy can be used to analyze numerical data.
+
+## 13. Bookstore Performance Report
+
+The `generate_report()` method summarizes important inventory and sales metrics.
+
+The report includes:
+
+- Total number of books.
+- Total stock quantity.
+- Total sales transactions.
+- Total quantity sold.
+- Total revenue.
+- Average book price.
+- Best-selling book.
+- Number of low-stock books.
+
+![Generate Report](screenshots/generate_report.png)
+
+## 14. Data Visualization
+
+The project includes four visualizations to present important sales insights.
+
+### 14.1 Bar Chart — Total Sales by Category
+
+The bar chart compares sales quantities across book categories. It helps identify categories with higher or lower sales volume.
+
+![Bar Chart - Total Sales by Category](screenshots/bar_chart.png)
+
+### 14.2 Line Chart — Monthly Sales Trends
+
+The line chart presents monthly sales trends and helps observe changes in sales activity over time.
+
+![Line Chart - Monthly Sales Trends](screenshots/line_chart.png)
+
+### 14.3 Pie Chart — Revenue Share by Category
+
+The pie chart shows the contribution of different book categories to total revenue.
+
+![Pie Chart - Revenue Share by Category](screenshots/pie_chart.png)
+
+### 14.4 Heatmap — Correlation Between Numerical Variables
+
+The heatmap visualizes correlations between numerical variables, such as book price, stock quantity, quantity sold, and total amount, depending on the columns used in the analysis.
+
+Correlation can help reveal linear relationships between variables, but it does not prove causation.
+
+![Heatmap - Correlation Between Price and Sales Volume](screenshots/heatmap.png)
+
+## 15. Testing and Verification
+
+The project can be tested by checking that:
+
+- Both CSV files load successfully.
+- Dataset dimensions and column information display correctly.
+- Missing values and duplicate records can be inspected.
+- Inventory information displays correctly.
+- Book addition and stock updates work as expected.
+- Low-stock books are identified correctly.
+- Sales calculations and reports execute successfully.
+- All four visualizations are generated without errors.
+- The Python program runs from the project folder.
+
+## 16. Installation and Requirements
+
+Install Python, then install the required libraries using:
+
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+## 17. How to Run the Project
+
+### Step 1: Download the Repository
+
+Download the repository from GitHub and extract it, or clone it:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Replace `YOUR_GITHUB_REPOSITORY_URL` with your repository URL.
+
+### Step 2: Open the Project Folder
+
+Open the project folder in Visual Studio Code or your preferred Python environment.
+
+### Step 3: Check the Required Files
+
+Ensure these files are present in the project folder:
+
+- `bookstore.py`
+- `Bookstore_Inventory_Analytics.ipynb`
+- `inventory.csv`
+- `sales.csv`
+
+### Step 4: Run the Python Program
+
+```bash
+python bookstore.py
+```
+
+The program loads the datasets and displays the bookstore report.
+
+### Step 5: Run the Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Open `Bookstore_Inventory_Analytics.ipynb` and execute the cells in order to explore the data analysis and visualizations.
+
+## 18. Project Structure
 
 ```text
 Bookstore_Inventory_Analytics/
@@ -183,7 +400,6 @@ Bookstore_Inventory_Analytics/
     ├── view_inventory.png
     ├── add_book.png
     ├── update_inventory.png
-    ├── low_stock.png
     ├── record_sale.png
     ├── sales_analysis.png
     ├── generate_report.png
@@ -193,104 +409,53 @@ Bookstore_Inventory_Analytics/
     └── heatmap.png
 ```
 
-## 8. Installation and Requirements
+## 19. Applications
 
-Make sure Python is installed on your computer.
+This project demonstrates how Python-based data analysis can support:
 
-Install the required libraries by running the following command in Command Prompt or the VS Code terminal:
+- Book inventory management.
+- Low-stock identification.
+- Sales transaction tracking.
+- Category-wise sales and revenue analysis.
+- Monthly sales monitoring.
+- Business reporting and decision-making.
 
-```bash
-pip install pandas numpy matplotlib seaborn jupyter
-```
+## 20. Learning Outcomes
 
-## 9. How to Run the Project
+Through this project, I gained practical experience in:
 
-### Step 1: Download or Clone the Repository
+- Python programming and OOP.
+- Creating and using classes and methods.
+- Loading and exploring CSV datasets.
+- Inspecting data types and dataset dimensions.
+- Checking missing values and duplicate records.
+- Understanding data cleaning and preprocessing.
+- Performing calculations using Pandas and NumPy.
+- Implementing inventory and sales operations.
+- Generating reports from datasets.
+- Creating visualizations using Matplotlib and Seaborn.
+- Documenting and organizing a project on GitHub.
 
-Download the project from GitHub and extract the ZIP file, or clone the repository using:
-
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
-
-Replace `YOUR_GITHUB_REPOSITORY_URL` with the actual URL of your GitHub repository.
-
-### Step 2: Open the Project Folder
-
-Open the `Bookstore_Inventory_Analytics` folder in Visual Studio Code or your preferred Python environment.
-
-### Step 3: Check the Dataset Files
-
-Ensure that these files are present in the same folder as `bookstore.py`:
-
-- `inventory.csv`
-- `sales.csv`
-
-### Step 4: Run the Python Program
-
-Open the terminal in the project folder and execute:
-
-```bash
-python bookstore.py
-```
-
-The program loads the inventory and sales datasets and displays the bookstore report.
-
-### Step 5: Run the Jupyter Notebook
-
-To explore the data analysis and visualizations, run:
-
-```bash
-jupyter notebook
-```
-
-Open `Bookstore_Inventory_Analytics.ipynb` and execute the notebook cells in order.
-
-## 10. Applications
-
-This project can be useful for:
-
-- Small and medium-sized bookstores.
-- Managing book stock and identifying low-stock items.
-- Monitoring sales transactions and revenue.
-- Comparing sales performance across book categories.
-- Understanding monthly sales patterns.
-- Supporting inventory and purchasing decisions.
-
-## 11. Learning Outcomes
-
-Through this project, the following concepts are demonstrated:
-
-- Designing a Python class and using its methods.
-- Applying Object-Oriented Programming concepts.
-- Reading and working with CSV files.
-- Using Pandas for data manipulation and analysis.
-- Using NumPy for numerical calculations.
-- Performing inventory and sales operations.
-- Creating data visualizations with Matplotlib and Seaborn.
-- Generating reports from structured datasets.
-- Organizing and documenting a Python project using GitHub.
-
-## 12. Future Enhancements
+## 21. Future Enhancements
 
 Possible future improvements include:
 
-- A graphical user interface for easier interaction.
-- Database integration for persistent storage.
-- Automatic stock alerts when inventory becomes low.
-- Advanced sales forecasting.
-- Exporting reports into PDF or Excel format.
+- Developing a graphical user interface.
+- Integrating a database for persistent storage.
+- Adding automatic low-stock notifications.
+- Implementing sales forecasting.
+- Exporting reports to PDF or Excel.
+- Developing an interactive analytics dashboard.
 
-## 13. Conclusion
+## 22. Conclusion
 
-The **Bookstore Inventory & Analytics System** demonstrates how Python programming and data analysis can be combined to manage bookstore inventory and understand sales performance.
+The **Bookstore Inventory & Analytics System** demonstrates how Python programming, Object-Oriented Programming, data processing, numerical analysis, and data visualization can be combined in a practical application.
 
-The project brings together OOP, Pandas, NumPy, Matplotlib, and Seaborn to support inventory management, sales recording, reporting, and visual analysis. The four visualizations provide different perspectives on category-wise sales, monthly trends, revenue distribution, and correlations between numerical variables.
+The project covers dataset exploration, data-quality checks, inventory management, sales recording, report generation, and visual analysis. These features help organize bookstore information and provide insights into sales performance and inventory levels.
 
-This project provides practical experience in Python development, data analysis, visualization, and project documentation.
-
-## 14. Author
+## 23. Author
 
 **Devansh Patel**
 
-Academic Python Project — Bookstore Inventory & Analytics System
+Academic Project — Bookstore Inventory & Analytics System
+
